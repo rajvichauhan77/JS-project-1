@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade</title>
+</head>
+<body>
+
+    <label for="">MATHS</label>
+    <input type="number" placeholder="Enter your marks" id="mark1">
+    <br><br>
+
+    <label for="">PHY</label>
+    <input type="number" placeholder="Enter your marks" id="mark2">
+    <br><br>
+
+    <label for="">CHEM</label>
+    <input type="number" placeholder="Enter your marks" id="mark3">
+    <br><br>
+
+    <label for="">ENGLISH</label>
+    <input type="number" placeholder="Enter your marks" id="mark4">
+    <br><br>
+
+    
+
+    
+
+    <button id="btn">Show Grade</button>
+    <p id="mat"></p>
+    <p id="phy"></p>
+    <p id="che"></p>
+    <p id="eng"></p>
+    <p id="total"></p>
+    <p id="persentage"></p>
+    <h1 id="grade"></h1>
+
+
+</body>
+
+    <script>
+
+       
+        
+        document.getElementById("btn").onclick = function(){
+            let MATHS = document.getElementById("mark1").value
+            let PHY = document.getElementById("mark2").value
+            let CHEM = document.getElementById("mark3").value
+            let ENGLISH = document.getElementById("mark4").value
+
+            MATHS = Number(MATHS)
+            PHY = Number(PHY)
+            CHEM = Number(CHEM)
+            ENGLISH = Number(ENGLISH)
+            
+            let total =( MATHS + PHY + CHEM + ENGLISH) 
+           
+            let persentage = (total)/4
+           
+
+            document.getElementById("mark1").innerHTML = "Maths marks is : " + mat
+            document.getElementById("mark2").innerHTML = "PHY marks is : " + phy
+            document.getElementById("mark3").innerHTML = "CHEM marks is : " + che
+            document.getElementById("mark4").innerHTML = "ENGLISH marks is : " + eng
+            document.getElementById("total").innerHTML = "Total is : " + total
+            document.getElementById("persentage").innerHTML = "Persentage is : " + persentage
+
+
+           
+
+            if(persentage>80){
+                document.getElementById("grade").innerHTML = "Your garde is A"
+            }
+            else if(persentage > 60){
+                document.getElementById("grade").innerHTML = "your grade is B"
+            }
+            else if(persentage > 50){
+                document.getElementById("grade").innerHTML = "your grade is C"
+            }
+            else if(persentage > 30){
+                document.getElementById("grade").innerHTML = "your grade is D"
+            }
+            else{
+                document.getElementById("grade").innerHTML = "You fail"
+            }
+
+        }
+
+    </script>
+</html>
