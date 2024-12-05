@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employ calculatr</title>
+</head>
+<body>
+    
+    <h2>Employ salary</h2>
+    <br><br>
+
+    <label for="">SALARY: </label>
+    <input type="number" id="salary" placeholder="salary">
+    <br> <br>
+    <label for="">EPF: </label>
+    <input type="number" id="epf" placeholder="epd">
+    <br> <br>
+    <label for="">ERPF: </label>
+    <input type="number" id="erpf" placeholder="erpf">
+    <br> <br>
+    <label for="">TAX: </label>
+    <input type="number" id="tax" placeholder="tax">
+    <br>
+    <br><br>
+
+    <button id="btn">Calculate</button>
+
+    <h5 id="epf_percent"></h5>
+    <h5 id="erpf_percent"></h5>
+    <h5 id="tax_percent"></h5>
+    <h1 id="total"></h1>
+
+</body>
+
+    <script>
+
+        document.getElementById("btn").onclick = function(){
+
+            let salary = document.getElementById("salary").value
+            let epf = document.getElementById("epf").value
+            let erpf = document.getElementById("erpf").value
+            let tax = document.getElementById("tax").value
+
+            let epf_percent = (epf * salary)/100
+            let erpf_percent = (erpf * salary)/100
+            let tax_percent = (tax * salary)/100
+
+            let total = (salary - epf_percent - erpf_percent - tax_percent)
+
+            document.getElementById("total").innerHTML = total
+            document.getElementById("epf_percent").innerHTML ="EPF value :" + epf_percent
+            document.getElementById("erpf_percent").innerHTML ="ERPF value: " + erpf_percent
+            document.getElementById("tax_percent").innerHTML ="TAX is: " + tax_percent
+            document.getElementById("total").innerHTML ="TOATL SALARY: " + total
+
+
+        }
+
+    </script>
+
+
+</html>

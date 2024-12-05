@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill</title>
+</head>
+<body>
+    
+    <h1>Bill</h1>
+    <br><br>
+
+    <label for="">Rice</label>
+    <input type="text" id="rice">
+    <br><br>
+
+    
+    <label for="">Tea</label>
+    <input type="text" id="tea">
+    <br><br>
+
+    
+    <label for="">Sugar</label>
+    <input type="text" id="sugar">
+    <br><br>
+
+    <button id="btn">Total bill</button>
+    <h3 id="first"></h3>
+    <h3 id="total"></h3>
+
+
+</body>
+
+    <script>
+
+        document.getElementById("btn").onclick = function(){
+
+            let Rice = document.getElementById("rice").value
+            let Tea = document.getElementById("tea").value
+            let Sugar = document.getElementById("sugar").value
+
+            const rice_price = 200;
+            const tea_price = 300;
+            const sugar_price = 400;
+
+            let total_rice = (rice_price * rice)
+            let total_tea = (tea_price * tea)
+            let total_sugar = (sugar_price * sugar)
+
+            let total = total_rice + total_tea + total_sugar
+
+            document.getElementById("first").innerHTML = 
+
+
+        }
+
+    </script>
+
+
+</html>

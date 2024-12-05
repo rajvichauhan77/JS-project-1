@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interest</title>
+</head>
+<body>
+    
+    <h1>Interset</h1>
+    <br><br>
+
+    <label for="">Total amount:</label>
+    <input type="number" id="p">
+    <br><br>
+    
+    <label for="">Rate of amount:</label>
+    <input type="number" id="r">
+    <br><br>
+    
+    <label for="">Time duration:</label>
+    <input type="number" id="t">
+    <br><br>
+
+    <button id="btn">calculate</button>
+    <h1 id="total"></h1>
+
+</body>
+
+    <script>
+
+        document.getElementById("btn").onclick = function(){
+            let p = document.getElementById("p").value
+            let r = document.getElementById("r").value
+            let t = document.getElementById("t").value
+
+            let total = (p*r*t)/100
+
+            document.getElementById("total").innerHTML = "Interesr is : " + p + " " + "at rate: " + r + "% " + t + " time is " + " " +total+ "."
+
+        }
+
+    </script>
+
+
+</html>
