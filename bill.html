@@ -35,9 +35,9 @@
 
         document.getElementById("btn").onclick = function(){
 
-            let Rice = document.getElementById("rice").value
-            let Tea = document.getElementById("tea").value
-            let Sugar = document.getElementById("sugar").value
+            let rice = document.getElementById("rice").value
+            let tea = document.getElementById("tea").value
+            let sugar = document.getElementById("sugar").value
 
             const rice_price = 200;
             const tea_price = 300;
@@ -50,6 +50,49 @@
             let total = total_rice + total_tea + total_sugar
 
             document.getElementById("first").innerHTML = 
+
+            `
+                <table class = "table" border ="">
+
+                    <thead>
+                       <tr>
+                            <th colspan ="3">Total bill </th>
+                      </tr> 
+
+                      <tr>
+                            <th>Items </th>
+                            <th>Quantity </th>
+                            <th>Total</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Rice</td>
+                            <td>${rice}</td>
+                            <td>${total_rice}</td>
+                        </tr>
+
+                        <tr>
+                            <td>Tea</td>
+                            <td>${tea}</td>
+                            <td>${total_tea}</td>
+                        </tr>
+
+                        <tr>
+                            <td>Sugar</td>
+                            <td>${sugar}</td>
+                            <td>${total_sugar}</td>
+                        </tr>
+
+                        <tr>
+                            <td>Total</td>
+                            <td colspan = "2">${total}</td>
+                            
+                        </tr>
+                    </tbody>
+                </table>
+
+            `
 
 
         }
